@@ -1,1 +1,23 @@
-#
+# 分析burpsuite日志
+将burpsuite日志按请求字段分类统计，保存为excel
+## 说明
+1. 运行脚本后，输入burpsuite日志文件名(脚本所在文件夹)
+2. burpsuite日志内容格式见目录中burpsuiteLog.txt
+3. burpsuite日志文件最好不要超过50M
+4. 运行结果见目录中burpsuiteLog.xlsx
+## 更新记录
+### V1.3
+- 修复bug：当请求长度小于100时数据被丢弃(getallList()中的判断语句增加正则匹配)
+### V1.2.1
+- 优化getallDic中进度条
+### V1.2
+- 优化进度条
+- 优化函数getallList()逻辑：优化请求后面有postdata时的逻辑
+- 优化函数onestrTodic()逻辑：优化有postdata时的逻辑
+- 优化函数saveExcel()逻辑：写自定义字段时的逻辑
+### V1.1
+- 修复BUG:函数onestrTodic()逻辑不严谨，导致数据写入错行
+### V1.0
+- 把库xlwt换为openpyxl库
+### v0.9
+- 初步编写完成
